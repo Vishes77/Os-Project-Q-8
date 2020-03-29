@@ -185,7 +185,8 @@ void giveoutput(){
  int main()
  {
     printf("\n INSTRUCTION \n"
-            "\n**>Enter Query arrival times in ascending order, i.e., in real tm arrival manner\n");
+            "\n**>Enter Query arrival times in ascending order, i.e., in real tm arrival manner\n"
+            "\n-->ALL THE INPUTS AND OUTPUT OF VALUES ARE IN MINUTE TIME FORMAT  \n );
     takedata();
     combine();
     DoRR();
