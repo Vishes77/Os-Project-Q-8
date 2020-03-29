@@ -128,6 +128,31 @@ void combine()
     }
 }
 
+void DoRR(){
+    int tm= ko[0].timea, sym=0, ak=0, j, acr;
+    while(tm!=120 && ak!=nak){
+        for(j=0; j<=sym; j++){
+            if(ko[j].ertb > quantamtime){
+                tm += quantamtime;
+                ko[j].ertb -= quantamtime;
+            }
+            else if(ko[j].ertb <=quantamtime && ko[j].ertb !=0){
+                tm += ko[j].ertb;
+                ko[j].ertb =0;
+                ko[j].completet = tm;
+                ak++;
+            }
+            else;
+        }
+        int nry = sym+1;
+        for(acr= nry; acr<nak; acr++){
+            if(ko[acr].timea <= tm){
+                sym++;
+            }
+        }
+    }   
+}
+
 
 
  int main()
