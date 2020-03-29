@@ -133,7 +133,7 @@ void takedata(){
             scanf("%d", &val);
             if(val==1)
             {
-                printf("PLEASE ENTER VALUE IN NUMBERS(e.g 1 to 9)");
+                printf("PLEASE ENTER VALUE IN NUMBERS(e.g 1 to 9) \n");
                 printf("ENTER Query Id : "); 
                 scanf("%d", &e[fc].processid);
                 printf("ENTER Arrival Time: "); 
@@ -141,14 +141,14 @@ void takedata(){
                 if(avg<1000 || avg>1200)
                 {
                     printf("WRITE IN FORMAT LIKE e.g 10:30  -> 1030 \n");
-                    printf("\n!!! WRONG !!! Enter Correct TIME");
+                    printf("\n!!! WRONG !!! Enter Correct TIME ");
                     takedata();
                 }
                 else
                 {
                     e[fc].timea= avg-1000;
                 }
-                printf("Enter time taken by to complete it e.g 10:50 -> 1050");
+                printf("Enter time taken by to complete it (like e.g 10:50 -> 1050) \n");
                 printf("Solving Time Required : ");
                 scanf("%d", &e[fc].timeb); 
                 e[fc].ertb= e[fc].timeb; 
@@ -156,7 +156,7 @@ void takedata(){
             } 
             else
             {
-                printf("PLEASE ENTER VALUE IN NUMBERS(e.g 1 to 9)");
+                printf("PLEASE ENTER VALUE IN NUMBERS(e.g 1 to 9) \n");
                 printf("ENTER Query Id: "); 
                 scanf("%d", &po[ace].processid);
                 printf("ENTER Arrival Time: "); 
@@ -170,7 +170,7 @@ void takedata(){
                 {
                     po[ace].timea= avg-1000; 
                 }
-                printf("Enter time taken by to complete it e.g 10:50 -> 1050");
+                printf("Enter time taken by to complete it (like e.g 10:50 -> 1050 ) \n");
                 printf("Solving Time Required: "); 
                 scanf("%d", &po[ace].timeb);  
                 po[ace].ertb= po[ace].timeb;
