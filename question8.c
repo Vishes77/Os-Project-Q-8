@@ -159,7 +159,21 @@ void DoRR(){
         }
     }   
 }
-
+void giveoutput(){
+    int i=0, total=0, sum=0; 
+    double avg;
+    printf("\nSummary for the Execution\n");
+    printf("\nQuery ID\tArrival tm\tRessolving tm\tCompletion tm\tTurn Around tm\tWaiting tm");
+    for(i; i<nak; i++){
+        printf("\n%d\t\t%d\t\t%d\t\t%d\t\t%d\t\t\t%d",
+        ko[i].processid, (ko[i].timea+1000), ko[i].timeb, (ko[i].completet+1000), (ko[i].completet-ko[i].timea), ((ko[i].completet-ko[i].timea)- ko[i].timeb)); total= ko[i].completet;
+        sum+= (ko[i].completet-ko[i].timea);
+    }
+    avg = sum/nak;
+    printf("\n\nTotal tm Spent for all queries: %d", total);
+    printf("\nAverage query tm: %lf", avg);
+    printf("\nProcess Execution Complete");
+}
 
 
  int main()
