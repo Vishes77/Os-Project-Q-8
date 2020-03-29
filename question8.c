@@ -67,6 +67,67 @@ void takedata(){
     }
 }
 
+void combine()
+{
+    int sec=0, de= 0, min, flag;
+    if( fc!=0  && ace!=0){
+        while(sec<ace && de<fc){
+            if(e[de].timea == po[sec].timea){
+                ko[nak] = e[de];
+                nak++;
+                de++;
+                ko[nak]= po[sec];
+                nak++;
+                sec++;
+            }
+            else if(e[de].timea < po[sec].timea){
+                ko[nak]= e[de];
+                nak++;
+                de++;
+            }
+            else if(e[de].timea > po[sec].timea){
+                ko[nak]= po[sec];
+                nak++;
+                sec++;
+            }
+            else;
+        }
+        if(nak != (fc+ace)){
+            if(fc!=de){
+                while(de!=fc){
+                    ko[nak]= e[de];
+                    nak++;
+                    de++;
+                }
+            }
+            else if(ace!=sec){
+                while(sec!=ace){
+                    ko[nak]= po[sec];
+                    nak++;
+                    sec++;
+                }
+            }
+        }
+    }
+    else if(fc==0){
+        while(sec!=ace){
+            ko[nak]= po[sec];
+            nak++;
+            sec++;
+        }
+    }
+    else if(ace==0){
+        while(de!=fc){
+            ko[nak]= e[de];
+            nak++;
+            de++;
+        }
+    }
+    else {
+        printf("\n INVALID INPUT SORRY\n");
+    }
+}
+
 
 
  int main()
