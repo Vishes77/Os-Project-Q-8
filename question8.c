@@ -1,4 +1,11 @@
 #include<stdio.h>
+struct Selection{
+    int processid;
+    int timea;
+    int timeb;
+    int completet;
+    int ertb;
+}e[100], po[100], ko[100];
 
 void takedata(){
     int val,  i, avg;
